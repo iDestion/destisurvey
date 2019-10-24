@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="destisurvey">
+    <output-path>$PROJECT_DIR$/out/artifacts/destisurvey</output-path>
+    <root id="archive" name="destisurvey.war">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="destisurvey" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="servlet-api" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="destisurvey/web/Web" />
+    </root>
+  </artifact>
+</component>

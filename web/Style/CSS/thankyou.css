@@ -1,0 +1,12 @@
+#header{
+    font-weight: bold;
+}
+
+#resultyeslabel, #resultnolabel{
+    display: flex;
+    background: rgba(0,0,0,.06);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}

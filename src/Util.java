@@ -1,10 +1,12 @@
-class Util {
-    //static String PATH = "C:\\Users\\Destion\\IdeaProjects\\destisurvey\\web\\Music";
-    static String PATH = "/home/destion/Music";
+public class Util {
+//    public static String PATH = "C:\\Users\\Destion\\IdeaProjects\\destisurvey\\web\\Music";
+    public static String PATH = "/home/destion/Music";
 
-    //static int PATHTRIM = 46;
-    static int PATHTRIM = 13;
+//    public static int PATHTRIM = 46;
+    public static int PATHTRIM = 14;
 
-    //static String OUTPUTPATH = "C:\\Users\\Destion\\IdeaProjects\\destisurvey\\src\\output\\";
-    static String OUTPUTPATH = "/home/destion/output/";
+//    public static String OUTPUTPATH = "C:\\Users\\Destion\\IdeaProjects\\destisurvey\\src\\output\\";
+    public static String OUTPUTPATH = "/home/destion/output/";
+
+    public static String sessionBounds = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
 }

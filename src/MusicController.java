@@ -3,18 +3,13 @@ import java.util.Stack;
 
 public class MusicController {
 
-    private String path;
+    private static String path = Util.PATH;
 
-    public MusicController(String path){
-        this.path = path;
-    }
-
-    public Stack<Song> returnFiles(){
+    public static Stack<Song> returnFiles(){
         File musicroot = new File(path);
         Stack<Song> songList = new Stack<>();
         if (musicroot.listFiles() != null){
             for (File file : musicroot.listFiles()){
-                System.out.println(file.getName() + "   " + file.getPath());
                 Song song = new Song(file.getName(), file.getAbsolutePath());
                 songList.add(song);
             }

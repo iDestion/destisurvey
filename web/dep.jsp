@@ -27,7 +27,7 @@
 
   <img src="Style/Images/logo.png" alt="Logo Universiteit Utrecht">
   
-  <p class="question">
+  <p class="content">
       This is an example question, purely used as a proof of context. The top fragment is the most representative, the bottom one the least. Music snippets do not belong to me.
       <br>The song used is <span style="font-weight: bold">Lola Montez</span> by <span style="font-weight: bold">Volbeat</span>.
   </p>

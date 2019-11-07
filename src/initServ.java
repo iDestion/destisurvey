@@ -65,24 +65,28 @@ public class initServ extends HttpServlet {
         for (File fragment : new File(currentsong.getPath()).listFiles()) {
             x++;
             String relpath = fragment.getPath().substring(Util.PATHTRIM);
+            String url = "http://micksneekes.nl/destisurvey/";
+            url += relpath;
             fragmentplayers += ("<li id=" +
                     "\"" + fragment.getName() + "\""+
                     "class=\"ranker\">\n" +
                     "      <p id=\"identifier\">"+
                     identifiers.pop()+
                     "</p>\n" +
-                    "      <audio controls>\n" +
+                    "      <audio controls controlsList=\"nodownload\">\n" +
                     "        <source src=\"" +
-                    relpath +
+                    url +
                     "\"" +
                     "type=\"audio/flac\">\n" +
+                    "Your browser does not support the audio element."+
                     "      </audio>\n" +
                     "    </li>");
         }
 
 
 
-        out.println("<html>\n" +
+        out.println("<!DOCTYPE html>"+
+                "<html>\n" +
                 "  <head>\n" +
                 "<meta charset=\"UTF-8\">" +
                 "    <title>Staging</title>\n" +

@@ -7,16 +7,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.security.SecureRandom;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Stack;
 
 public class initServ extends HttpServlet {
-
-    private static Stack songs;
-
-    public static Stack getSongs() {
-        return songs;
-    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         //Generate new Session ID, to be stored in the static mapping in the sessiontracker, if there is none apparent already
@@ -26,7 +21,7 @@ public class initServ extends HttpServlet {
             id = LocalDateTime.now() + "--" + SessionTracker.generateToken(new SecureRandom(), Util.sessionBounds, 15);
         }
         //list generated from the session tracker, which will return a new list in this case, no session for this user should exist
-        songs = SessionTracker.sessionLookup(id);
+        Stack songs = SessionTracker.sessionLookup(id);
         Collections.shuffle(songs);
 
 
@@ -45,7 +40,7 @@ public class initServ extends HttpServlet {
 
         // if the songs stack is empty, the user with the current session has completed every question defined in the system. Send him/her to a thank you page.
         if(songs.isEmpty()){
-            response.sendRedirect("thankyou.jsp");
+            response.sendRedirect("thankyounl.jsp");
             return;
         }
 
@@ -53,7 +48,6 @@ public class initServ extends HttpServlet {
         String hiddenName = "<input type=\"hidden\" name=\"songname\" id=\"songname\" value=\"" + currentsong.getTitle().replaceAll("\\s","") + "\">";
         String hiddenSession = "<input type=\"hidden\" name=\"session\" id=\"session\" value=\"" + id + "\">";
         String fragmentplayers = "";
-        int x = 0;
         Stack<String> identifiers = new Stack<>();
         //Identifiers currently are utf-8 symbols. This tool currently uses 6 different ones, essentially making the maximum number of fragments per song 6.
         identifiers.add("&#9640");
@@ -62,8 +56,15 @@ public class initServ extends HttpServlet {
         identifiers.add("▦");
         identifiers.add("▩");
         identifiers.add("▨");
-        for (File fragment : new File(currentsong.getPath()).listFiles()) {
-            x++;
+        //following variable limits the amount of fragments used, in case more fragments are apparent in the folder
+        int limit = 3;
+        int x = 0;
+        File[] files = new File(currentsong.getPath()).listFiles();
+        Collections.shuffle(Arrays.asList(files));
+        for (File fragment : files) {
+            if(x >= limit){
+                break;
+            }
             String relpath = fragment.getPath().substring(Util.PATHTRIM);
             String url = "http://micksneekes.nl/destisurvey/";
             url += relpath;
@@ -77,10 +78,11 @@ public class initServ extends HttpServlet {
                     "        <source src=\"" +
                     url +
                     "\"" +
-                    "type=\"audio/flac\">\n" +
+                    "type=\"audio/mp3\">\n" +
                     "Your browser does not support the audio element."+
                     "      </audio>\n" +
                     "    </li>");
+            x++;
         }
 
 
@@ -89,6 +91,7 @@ public class initServ extends HttpServlet {
                 "<html>\n" +
                 "  <head>\n" +
                 "<meta charset=\"UTF-8\">" +
+                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" +
                 "    <title>Staging</title>\n" +
                 "<link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-57x57.png\">\n" +
                 "<link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-60x60.png\">\n" +

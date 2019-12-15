@@ -6,23 +6,21 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
-
-    <servlet>
-    <servlet-name>surveyservlet</servlet-name>
-    <servlet-class>surveyServ</servlet-class>
-</servlet>
-    <servlet-mapping>
-        <servlet-name>surveyservlet</servlet-name>
-        <url-pattern>/survey</url-pattern>
-    </servlet-mapping>
     <servlet>
     <servlet-name>initservlet</servlet-name>
     <servlet-class>initServ</servlet-class>
-</servlet>
+    </servlet>
     <servlet-mapping>
         <servlet-name>initservlet</servlet-name>
         <url-pattern>/init</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>initservleten</servlet-name>
+        <servlet-class>initServEn</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>initservleten</servlet-name>
+        <url-pattern>/initen</url-pattern>
     </servlet-mapping>
     <servlet>
         <servlet-name>consentservlet</servlet-name>
@@ -39,6 +37,22 @@
     <servlet-mapping>
         <servlet-name>getresult</servlet-name>
         <url-pattern>/getresult</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>exampleserv</servlet-name>
+        <servlet-class>ExampleServ</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>exampleserv</servlet-name>
+        <url-pattern>/example</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>exampleserven</servlet-name>
+        <servlet-class>ExampleServEn</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>exampleserven</servlet-name>
+        <url-pattern>/exampleen</url-pattern>
     </servlet-mapping>
 
     <jsp-config>

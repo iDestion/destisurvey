@@ -7,10 +7,6 @@ public class SessionTracker {
 
     public static Map<String, Stack<Song>> mapping = new HashMap<>();
 
-    public static void storeSession(String id, Stack<Song> stack){
-        mapping.put(id, stack);
-    }
-
     public static Stack<Song> sessionLookup(String id){
         if(mapping.containsKey(id)){
             return mapping.get(id);

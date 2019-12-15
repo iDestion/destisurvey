@@ -2,11 +2,13 @@ public class Song {
 
     private String title;
     private String path;
+    private String fragment;
     private String artist;
 
     Song(String artisttitle, String path){
         this.artist = artisttitle.split("-")[0];
         this.title = artisttitle.split("-")[1];
+        this.fragment = artisttitle.split("-")[1];
         this.path = path;
     }
 
@@ -20,5 +22,9 @@ public class Song {
 
     public String getArtist() {
         return artist;
+    }
+
+    public String getFragment(){
+        return fragment;
     }
 }

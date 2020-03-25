@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>Staging</title>
+    <title>Music-Thumbnails</title>
 
     <!-- CSS sheets -->
       <link rel="stylesheet" href="Style/CSS/reset.css">

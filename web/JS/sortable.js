@@ -7,6 +7,7 @@ $('.sortable-list').sortable({
     create: function(event, ui){
         var startorder = $(this).sortable('toArray');
         positionlist = startorder.join(';');
+        document.getElementById('result').setAttribute('value', positionlist);
     },
 
     // start: function (event, ui) {
@@ -16,16 +17,17 @@ $('.sortable-list').sortable({
     //     ui.item.toggleClass("highlight");
     // },
     update: function(event, ui) {
-        var changedList = this.id;
         var order = $(this).sortable('toArray');
-        var positions = order.join(';');
+        positionlist = order.join(';');
         console.log({
-            id: changedList,
-            positions: positions
+            positionstest: positionlist
          });
+        document.getElementById('result').setAttribute('value', positionlist);
     }
 });
 
-$('input#confirm').click(function(){
-    document.getElementById('result').value = positionlist;
-});
+// $('input#confirm').click(function(){
+//     var order = $(this).sortable('toArray');
+//     positionlist = order.join(';');
+//     document.getElementById('result').setAttribute('value', positionlist);
+// });

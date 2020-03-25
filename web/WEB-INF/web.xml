@@ -7,8 +7,8 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
     <servlet>
-    <servlet-name>initservlet</servlet-name>
-    <servlet-class>initServ</servlet-class>
+        <servlet-name>initservlet</servlet-name>
+        <servlet-class>initServ</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>initservlet</servlet-name>

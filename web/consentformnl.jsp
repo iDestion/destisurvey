@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Music thumbnailing</title>
+    <title>Music-Thumbnails</title>
 
     <%@include file="favicon.jsp"%>
 
@@ -31,7 +31,7 @@
 <form id="radioform" action="${pageContext.request.contextPath}/consent" method="post">
     <label id="consentlabel" class="content" for="consent"><input type="radio" id="consent" name="consent" value="consent" required> Ik geef toestemming</label>
     <label id="noconsentlabel" class="content" for="noconsent"><input type="radio" id="noconsent" name="consent" value="noconsent"> Ik geef geen toestemming</label>
-    <input id="confirm" type="submit" value="Continue→">
+    <input id="confirm" type="submit" value="Verder→">
 </form>
 
 </body>

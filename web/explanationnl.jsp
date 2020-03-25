@@ -9,7 +9,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Music thumbnailing</title>
+    <title>Music-Thumbnails</title>
 
     <%@include file="favicon.jsp"%>
 
@@ -23,7 +23,7 @@
 </p>
 
 <a href="${pageContext.request.contextPath}/consentformnl.jsp">
-    <button style="width: 120px;" id="confirm">Start the survey→</button>
+    <button style="width: 120px;" id="confirm">Start de enquête→</button>
 </a>
 
 </body>

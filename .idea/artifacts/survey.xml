@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="destisurvey">
-    <output-path>$PROJECT_DIR$/out/artifacts/destisurvey</output-path>
-    <root id="archive" name="destisurvey.war">
+  <artifact type="war" name="survey">
+    <output-path>$PROJECT_DIR$/out/artifacts/survey</output-path>
+    <root id="archive" name="survey.war">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="destisurvey" />

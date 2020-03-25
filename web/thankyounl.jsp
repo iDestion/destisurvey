@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Music thumbnailing</title>
+    <title>Music-Thumbnails</title>
 
     <%@include file="favicon.jsp"%>
 
@@ -26,7 +26,7 @@
     <label id="resultyeslabel" class="content" for="resultyes"><input type="radio" id="resultyes" name="resultsradio" value="resultyes" required> Ja, e-mail: <input type="email" name="email" id="email"></label>
 <%--    <label for="email" class="content">E-mail adres: <input type="email" name="email" id="email"></label>--%>
     <label id="resultnolabel" class="content" for="resultno"><input type="radio" id="resultno" name="resultsradio" value="resultno" required> Nee</label>
-    <input id="confirm" type="submit" value="Continue→">
+    <input id="confirm" type="submit" value="Verder→">
 </form>
 </body>
 </html>

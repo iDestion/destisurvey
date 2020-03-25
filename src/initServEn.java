@@ -66,7 +66,7 @@ public class initServEn extends HttpServlet {
                 break;
             }
             String relpath = fragment.getPath().substring(Util.PATHTRIM);
-            String url = "http://micksneekes.nl/destisurvey/";
+            String url = "http://music-thumbnails.science.uu.nl/survey/";
             url += relpath;
             fragmentplayers += ("<li id=" +
                     "\"" + fragment.getName() + "\""+
@@ -92,7 +92,7 @@ public class initServEn extends HttpServlet {
                 "  <head>\n" +
                 "<meta charset=\"UTF-8\">" +
                 "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" +
-                "    <title>Staging</title>\n" +
+                "    <title>Music-Thumbnails</title>\n" +
                 "<link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-57x57.png\">\n" +
                 "<link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-60x60.png\">\n" +
                 "<link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-72x72.png\">\n" +
@@ -106,7 +106,8 @@ public class initServEn extends HttpServlet {
                 "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-32x32.png\">\n" +
                 "<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-96x96.png\">\n" +
                 "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-16x16.png\">\n" +
-                "<link rel=\"manifest\" href=\"${pageContext.request.contextPath}/Style/favicon/manifest.json\">\n" +
+                "<link rel=\"manifest\" href=\"${pageContext.request.contextPath}/Style/favicon/manifest.json\">\n"  +
+                "<link rel= \"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\"/>"+
                 "<meta name=\"msapplication-TileColor\" content=\"#ffffff\">\n" +
                 "<meta name=\"msapplication-TileImage\" content=\"/ms-icon-144x144.png\">\n" +
                 "<meta name=\"theme-color\" content=\"#ffffff\">" +
@@ -146,7 +147,7 @@ public class initServEn extends HttpServlet {
 
                 "  </ul>\n" +
                 "\n" +
-                "  <form action=\"/destisurvey/initen\" method=\"get\">\n" +
+                "  <form action=\"/survey/initen\" method=\"get\">\n" +
                 "    <input type=\"hidden\" name=\"result\" id=\"result\" value=\"\">\n" +
                 hiddenName+
                 hiddenSession+

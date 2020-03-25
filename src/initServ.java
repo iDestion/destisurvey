@@ -66,7 +66,7 @@ public class initServ extends HttpServlet {
                 break;
             }
             String relpath = fragment.getPath().substring(Util.PATHTRIM);
-            String url = "http://micksneekes.nl/destisurvey/";
+            String url = "http://music-thumbnails.science.uu.nl/survey/";
             url += relpath;
             fragmentplayers += ("<li id=" +
                     "\"" + fragment.getName() + "\""+
@@ -92,24 +92,24 @@ public class initServ extends HttpServlet {
                 "  <head>\n" +
                 "<meta charset=\"UTF-8\">" +
                 "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" +
-                "    <title>Staging</title>\n" +
                 "<link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-57x57.png\">\n" +
-                "<link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-60x60.png\">\n" +
-                "<link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-72x72.png\">\n" +
-                "<link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-76x76.png\">\n" +
-                "<link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-114x114.png\">\n" +
-                "<link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-120x120.png\">\n" +
-                "<link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-144x144.png\">\n" +
-                "<link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-152x152.png\">\n" +
-                "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-180x180.png\">\n" +
-                "<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"${pageContext.request.contextPath}/Style/favicon/android-icon-192x192.png\">\n" +
-                "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-32x32.png\">\n" +
-                "<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-96x96.png\">\n" +
-                "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-16x16.png\">\n" +
-                "<link rel=\"manifest\" href=\"${pageContext.request.contextPath}/Style/favicon/manifest.json\">\n" +
-                "<meta name=\"msapplication-TileColor\" content=\"#ffffff\">\n" +
-                "<meta name=\"msapplication-TileImage\" content=\"/ms-icon-144x144.png\">\n" +
-                "<meta name=\"theme-color\" content=\"#ffffff\">" +
+                        "<link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-60x60.png\">\n" +
+                        "<link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-72x72.png\">\n" +
+                        "<link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-76x76.png\">\n" +
+                        "<link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-114x114.png\">\n" +
+                        "<link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-120x120.png\">\n" +
+                        "<link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-144x144.png\">\n" +
+                        "<link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-152x152.png\">\n" +
+                        "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"${pageContext.request.contextPath}/Style/favicon/apple-icon-180x180.png\">\n" +
+                        "<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"${pageContext.request.contextPath}/Style/favicon/android-icon-192x192.png\">\n" +
+                        "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-32x32.png\">\n" +
+                        "<link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-96x96.png\">\n" +
+                        "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"${pageContext.request.contextPath}/Style/favicon/favicon-16x16.png\">\n" +
+                        "<link rel=\"manifest\" href=\"${pageContext.request.contextPath}/Style/favicon/manifest.json\">\n"  +
+                "<link rel= \"shortcut icon\" href=\"favicon.ico\" type=\"image/x-icon\"/>"+
+                        "<meta name=\"msapplication-TileColor\" content=\"#ffffff\">\n" +
+                        "<meta name=\"msapplication-TileImage\" content=\"/ms-icon-144x144.png\">\n" +
+                        "<meta name=\"theme-color\" content=\"#ffffff\">"+
                 "\n" +
                 "    <!-- CSS sheets -->\n" +
                 "      <link rel=\"stylesheet\" href=\"Style/CSS/reset.css\">\n" +
@@ -147,11 +147,11 @@ public class initServ extends HttpServlet {
 
                 "  </ul>\n" +
                 "\n" +
-                "  <form action=\"/destisurvey/init\" method=\"get\">\n" +
+                "  <form action=\"/survey/init\" method=\"get\">\n" +
                 "    <input type=\"hidden\" name=\"result\" id=\"result\" value=\"\">\n" +
                 hiddenName+
                 hiddenSession+
-                "    <input id=\"confirm\" type=\"submit\" value=\"Continue→\">\n" +
+                "    <input id=\"confirm\" type=\"submit\" value=\"Verder→\">\n" +
                 "  </form>\n" +
                 "  <script src=\"JS/sortable.js\"></script>\n" +
                 "  </body>\n" +
